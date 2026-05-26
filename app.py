@@ -32,7 +32,7 @@ plt.rcParams['font.family'] = 'DejaVu Sans'
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r'C:\Users\Lenovo\dashboard_project\data\cleaned_movies.csv')
+    df = pd.read_csv('cleaned_movies.csv')
     df['Votes_clean'] = pd.to_numeric(df['Votes'].astype(str).str.replace(',', ''), errors='coerce')
     df['Year'] = pd.to_numeric(df['Year'], errors='coerce')
     df['Rating'] = pd.to_numeric(df['Rating'], errors='coerce')
