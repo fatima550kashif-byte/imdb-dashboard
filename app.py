@@ -128,7 +128,7 @@ def chart_header(title, desc):
 # ── Data ──────────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv('data/cleaned_movies.csv')
+    df = pd.read_csv('cleaned_movies.csv')')
     df['Votes_clean'] = pd.to_numeric(
         df['Votes'].astype(str).str.replace(',', ''), errors='coerce')
     for col in ['Year','Rating','Duration (min)','Metascore']:
